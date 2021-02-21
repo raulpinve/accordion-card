@@ -31,6 +31,10 @@ body{
 .is-hidden{
     display: none !important;
 }
+.not-hidden{
+    display: block;
+    transition: .3s;
+}
  /* Card */
 .card{
     width: 327px;
@@ -96,6 +100,17 @@ body{
     display: grid;
     grid-template-columns: 1fr 12px;
 }
+.button-accordion {
+    background: white;
+    background-image: url('images/icon-arrow-down.svg');
+    height: 15px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
 
 /* Media querys */
 @media screen and (max-width: 1280px){

@@ -1,0 +1,159 @@
+
+/* root variables */
+:root{
+    /* Primary Text */
+    --darkDesaturatedBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    /* Background gradient */
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    /* Neutral Text */
+    --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --darkGrayishBlue: hsl(240, 6%, 50%);
+    /* Dividers */
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+/* Globals settings  */
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body{
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(to bottom, var(--softViolet) 0%, var(--softBlue) 100%);
+    height: 100vh;
+}
+.is-hidden{
+    display: none !important;
+}
+ /* Card */
+.card{
+    width: 327px;
+    height: 536px;
+    background-color: white;    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 88px;
+    bottom: 0;
+    margin: auto;
+    border-radius: 2em;
+    padding: 0 2em;
+}
+.card-illustration-mobile{
+    width: 100%;
+    height: 127px;
+}
+/* Card Illustration */
+#card-illustration-pattern-mobile{
+    display: block;
+    margin: auto;
+}
+#card-illustration-woman-mobile{
+    display: block;
+    position: relative;
+    top: -210px;
+    left: -15px;
+    margin: auto;
+}
+.card-body-title{
+    text-align: center;
+    font-size: 3em;
+}
+
+/* Card-body */
+.card-body{
+    height: calc(100% - 300px);
+}
+
+/* Card-body-list-element */
+.card-body-list{
+    padding-top: 2em;
+}
+.card-body-list-element{
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    padding: 1.5em 0;
+}
+
+.card-body-list-element-header{
+    display: grid;
+    grid-template-columns: 1fr 12px;
+    align-items: center;
+    font-size: 1.1em;
+}
+.card-body-list-element-description{
+    color:grey;
+    font-size: 1em;
+    padding-top: 1.1em;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+    line-height: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 12px;
+}
+
+/* Media querys */
+@media screen and (max-width: 1280px){
+    .card-header-desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    
+    .card-header-mobile{
+        display: none;
+    }
+
+    .card{
+       min-width: 920px;  
+       z-index: 1;
+       margin: auto;
+       padding: 0;       
+    }
+    .card-wrapper{
+        display: flex;
+        justify-content: space-between;
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+    }
+    .card-header-desktop{ 
+        overflow-y: hidden;
+    }
+    .card-body{
+        padding: 8em 4em;
+    }
+    .card-body-title{
+        text-align: left;
+    }
+    /*Illustration*/
+    .card-illustration-desktop{
+        position: relative;
+        width: 100%;
+    }
+    #card-illustration-woman-desktop{
+        display: block;
+        position: absolute;
+        left: -65px;
+        top: 80px;
+        width: 100%;
+        z-index: 2;
+    }
+    #card-illustration-box-desktop{
+        position: absolute;
+        left: -92px;
+        top: 200px;
+        z-index: 3;
+    }
+    #bg-pattern-desktop{
+        position: absolute;
+        top: -280px;
+        left: -560px;
+        z-index: 1;
+    }
+}
